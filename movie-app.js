@@ -72,7 +72,9 @@ fetch('https://spectacular-hammerhead-galley.glitch.me/movies')
             //     console.log("You can edit the movie")
 
             if (titleEntered === data[i].title) {
-                // console.log("The same title")
+                console.log("The same title")
+                console.log(data[i].id)
+
             // // const url = 'https://codeup-json-server.glitch.me/movies';
             let options = {
                 method: 'PUT',
@@ -81,11 +83,11 @@ fetch('https://spectacular-hammerhead-galley.glitch.me/movies')
                 },
                 body: JSON.stringify(editMovie),
             };
-            fetch(url, options)
+            fetch(url + "/" + `${data[i].id}`, options)
                 .then((response) => {
                     // console.log(response)
-                    console.log('same title');
-                    // window.location.reload(true)
+                    console.log('New rating is: ' + editMovie.rating);
+                    window.location.reload(true)
                 })
                 // .then(response => console.log(response)) /* review was created successfully */
                 .catch(error => console.error(error)); /* handle errors */
