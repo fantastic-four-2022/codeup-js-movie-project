@@ -7,11 +7,13 @@
 //     },
 //     body: JSON.stringify(blogPost),
 // };
-const url = 'https://codeup-json-server.glitch.me/movies'
-fetch('https://codeup-json-server.glitch.me/movies')
+const url = 'https://abrasive-holy-ocean.glitch.me/movies'
+fetch('https://abrasive-holy-ocean.glitch.me/movies')
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        // console.log(data)
+        const example = data;
+        // console.log(example);
         data.forEach(post => {
             if(typeof(post.title) == 'string'){
             console.log(post.title);
@@ -22,14 +24,44 @@ fetch('https://codeup-json-server.glitch.me/movies')
                         `<h1>${post.title}</h1>` +
                         `<h4>Rating:  ${post.rating}</h4>` +
                         `<img src="${post.poster}" style="height:300px; width:200px;">` +
-                        `<button id="delete">delete movie</button>`
+                        `<button id="${post.id}" >delete movie</button>`
+
                     )
             }
+
+        })
+        for (let i = 0; i < data.length; i++) {
+            if ($("#"+`${data[i].id}`).click) {
+
+//DELETE request
+                    fetch(url + "/" + `${data[i].id}`, {
+                        method: 'DELETE'
+                    }).then(() => {
+                        console.log('removed');
+                    }).catch(err => {
+                        console.error(err)
+                    })
+
+                }
+            }
+
+//         (function (id) {
+// //DELETE request
+//                     fetch(url + "/" + `${post.id}`, {
+//                         method: 'DELETE'
+//                     }).then(() => {
+//                         console.log('removed');
+//                     }).catch(err => {
+//                         console.error(err)
+//                     })
+//
+//             })
             //     }
             // }
             // return hasTitle()
-        })
+
     })
+
 // function addMovie() {
 //     const reviewObj = {
 //         id: movies.length + 1,
@@ -76,18 +108,20 @@ $('#add').click((e) => {
 })
 
 
-let deleteOptions = {
-    method: 'DELETE',
-    headers: {
-        'Content-Type': 'application/json',
-    }
-};
+// let deleteOptions = {
+//     method: 'DELETE',
+//     headers: {
+//         'Content-Type': 'application/json',
+//     }
+// };
 
-$("#delete").click(function() {
-//DELETE request
-    fetch(`${url}/${inputVal}`, deleteOptions)
-        .then();
-});
+
+
+// $("#delete").click(function() {
+// //DELETE request
+//     fetch(`${url}/${inputVal}`, deleteOptions)
+//         .then();
+// });
 
 // $('#delete').click((e) => {
 //     e.preventDefault();
