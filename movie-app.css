@@ -1,0 +1,39 @@
+input {
+    font-style: italic;
+    width: 100%;
+    margin-bottom: 5px;
+}
+textarea {
+    font-style: italic;
+    width: 100%;
+}
+.backCover {
+    min-width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 24em;
+    /*margin-top: .5em;*/
+    background-color: white;
+    padding-top: 8em;
+    border-bottom: black solid 4px;
+    /*border-top: black solid 5px;*/
+    /*display: flex;*/
+    background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2021%2F08%2F17%2F19%2F56%2Fprojector-6554062_1280.jpg");
+
+    /*background-image: url("https://img.freepik.com/free-photo/composition-cinema-elements-red-background-with-copy-space_23-2148457845.jpg?t=st=1652457265~exp=1652457865~hmac=070eb83d6cbb6881c5bd83d928b547419096cf53427619f835b9625de98c0c4c&w=996");*/
+}
+/*.bean {*/
+/*    !*background-image: url("https://img.freepik.com/free-vector/vintage-film-strip-frame-reel-background_1017-23460.jpg?t=st=1652457265~exp=1652457865~hmac=db85911fbb4bc51397d2aa92657f446f8da1c4913e96043e4f0989408d9c2e22&w=996");*!*/
+/*    background-size: 70px;*/
+/*    background-repeat: repeat-x;*/
+/*    !*height: auto;*!*/
+/*    !*background-color: black;*!*/
+/*}*/
+.backColor {
+    background-image: linear-gradient(white, yellow);
+    background-color: white;
+}
+/*#editMovie{*/
+/*    background-color: lightgrey;*/
+
+/*}*/
