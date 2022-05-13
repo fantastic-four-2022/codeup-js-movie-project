@@ -46,14 +46,14 @@ fetch('https://spectacular-hammerhead-galley.glitch.me/movies')
 
                     `<div class="col-8">` +
 
-                    `<h3>${post.title}</h3>` +
+                    `<h3 style="margin-left: 38px">${post.title}</h3>` +
                     `<ul style="list-style: none">` +
                     `<li>Genre:    ${post.genre}</li>` +
                     `<li>Rating:  ${post.rating}</li>` +
                     `<li>Director:  ${post.director}</li>` +
                     `<li>Plot:  ${post.plot}</li>` +
                     `</ul>`+
-                    `<button id="${post.id}" >delete movie</button>` +
+                    `<button style="margin-left: 38px" id="${post.id}" >delete movie</button>` +
                     `</div>` +
                     `</div>` +
 
