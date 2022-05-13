@@ -30,10 +30,19 @@ textarea {
 /*    !*background-color: black;*!*/
 /*}*/
 .backColor {
-    background-image: linear-gradient(white, yellow);
-    background-color: white;
+    background-image: linear-gradient(180deg, white, orange);
+    /*background-color: white;*/
 }
 /*#editMovie{*/
 /*    background-color: lightgrey;*/
 
 /*}*/
+body{
+    font-family: lato;
+}
+.top-right {
+    position: absolute;
+    top: 35px;
+    right: 16px;
+    color: #857068;
+}
