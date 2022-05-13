@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="movie-app.css">
 </head>
 <body>
+
+<div class="jumbotron backCover">
+    <div class=" jumboText">
+        <h1 class="display-1" style="font-weight: bold; text-align: right">Movie <br>App</h1>
+        <p class="lead ml-auto" id="quote"></p>
+    </div>
+</div>
+<div class="backColor">
+
+<div class="bean"> <!-- BOTTOM BEAN BORDER -->
+
+
+    <h1 style="text-align: center">Our movie list</h1>
+
+<!--    </br>-->
+
+</div>
+
 <div class="controls">
     <button id="reload" type="button">Reload</button>
 </div>
@@ -19,72 +37,96 @@
 <div class="spinner-wrapper">
     <div class="spinner"></div>
 </div>
-<script>
-    let spinnerWrapper = document.querySelector('.spinner-wrapper');
-    window.addEventListener('load', function () {
-        // spinnerWrapper.style.display = 'none';
-        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
-    });
-</script>
-<div class="main-content">
-    <div class="container">
-        <div class="row">
-            <div id="movies" class="col-6 text-center">
 
-            </div>
+<!--<div class="main-content">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+            <div id="movies"></div>
 
-            <div class="">
-                <h1>Add a movie to the list</h1>
-                <button id="post-id">Post Movie</button>
-                <div id="newMovie">
-                    <label>Title </label>
-                    <input type="text" id="title">
-
-                    <label>Genre </label>
-                    <input type="text" id="genre">
-
-                    <label>Rating </label>
-                    <input type="text" id="rating">
-
-                    <label>Director </label>
-                    <input type="text" id="director">
-
-                    <div class="textBox">
-                        <label>Plot </label>
-                        <textarea id="plot" rows="5"></textarea>
+<!--                <button id="post-id">Post Movie</button>-->
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="outline: auto">
+                        <div id="newMovie">
+                            <h1 style="text-align: center">Add a movie to the list</h1>
+                    <div>
+<!--                    <label>Title </label>-->
+                    <input placeholder="Add title here" type="text" id="title">
                     </div>
+                    <div>
+<!--                        <label>Genre </label>-->
+                        <input placeholder="Add genre here" type="text" id="genre">
+                    </div>
+                    <div>
+<!--                        <label>Rating </label>-->
+                        <input placeholder="Add rating (1 Low-5 High)" type="text" id="rating">
+                    </div>
+                    <div>
+<!--                        <label>Director </label>-->
+                        <input placeholder="Add director here" type="text" id="director">
+                    </div>
+<!--                    <label>Genre </label>-->
+<!--                    <input type="text" id="genre">-->
 
+<!--                    <label>Rating </label>-->
+<!--                    <input type="text" id="rating">-->
+
+<!--                    <label>Director </label>-->
+<!--                    <input type="text" id="director">-->
+<!--                    <div class="textBox">-->
+<!--                        &lt;!&ndash;                        <label>Director </label>&ndash;&gt;-->
+<!--                        <input rows="4" placeholder="Add Plot Here" type="text" id="plot">-->
+<!--                    </div>-->
+                    <div class="textBox">
+<!--                        <label>Plot </label>-->
+                        <textarea id="plot" rows="4" placeholder="Add Plot Here"></textarea>
+                    </div>
+<!--                    <label>poster </label>-->
+                    <input placeholder="Add a image URL" type="text" id="addImg">
+                    <div>
                     <button id="add">Add Movie</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="">
+            <div class="col" style="outline: auto"">
                 <!--            <button id="post-id">Post Movie</button>-->
                 <div id="editMovie">
-                    <h1>Edit a movie</h1>
-                    <label>Title </label>
-                    <input type="text" id="editTitle">
-
-                    <button id="edit">Edit Movie</button>
-
-                    <label>Genre </label>
-                    <input type="text" id="editGenre">
-
-                    <label>Rating </label>
-                    <input type="text" id="editRating">
-
-                    <label>Director </label>
-                    <input type="text" id="editDirector">
-
+                    <h1 style="text-align: center">Edit a movie</h1>
+                    <div>
+<!--                    <label>Current Title </label>-->
+                    <input placeholder="Enter the current title" type="text" id="oldTitle">
+                    </div>
+                    <div>
+<!--                    <label>Update Title </label>-->
+                    <input placeholder="Enter the new title" type="text" id="editTitle">
+                     </div>
+                    <div>
+<!--                    <label>Genre </label>-->
+                    <input placeholder="Enter the genre here" type="text" id="editGenre">
+                    </div>
+                    <div>
+<!--                    <label>Rating </label>-->
+                    <input placeholder="Enter the rating here" type="text" id="editRating">
+                    </div>
+                    <div>
+<!--                    <label>Director </label>-->
+                    <input placeholder="Enter the director here" type="text" id="editDirector">
+                    </div>
                     <div class="textBox">
-                        <label>Plot </label>
+<!--                        <label>Plot </label>-->
                         <textarea id="editPlot" rows="5"></textarea>
                     </div>
-
+<!--                    <label>poster </label>-->
+                    <input placeholder="Update image URL" type="text" id="editImg">
+                    <div><button id="edit">Edit Movie</button></div>
 
                 </div>
             </div>
-            ` `
+            </div>
+            </div>
+</div>
+
+` `
 
             <!--        <form class="col-6">-->
             <!--            <h1>Add a Movie:</h1>-->
@@ -101,12 +143,18 @@
             <!--            <input id="new-title-selection" name="new-title-selection" type="text">-->
             <!--            <button>Submit Movie Title & Rating</button>-->
             <!--        </form>-->
-        </div>
-    </div>
-</div>
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <!--scripts-->
-
+<script>
+    let spinnerWrapper = document.querySelector('.spinner-wrapper');
+    window.addEventListener('load', function () {
+        // spinnerWrapper.style.display = 'none';
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+    });
+</script>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
