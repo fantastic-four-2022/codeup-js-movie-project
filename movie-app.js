@@ -38,10 +38,27 @@ fetch('https://spectacular-hammerhead-galley.glitch.me/movies')
                 // function hasTitle(){
                 //     if(post.title !== 'undefined'){
                 $('#movies').append(
-                    `<h1>${post.title}</h1>` +
-                    `<h4>Rating:  ${post.rating}</h4>` +
+                    `<div class="container">` +
+                    `<div class="row" style="outline: auto; padding-bottom: 10px; padding-top: 10px">` +
+                    `<div class="col-4">` +
                     `<img src="${post.poster}" style="height:300px; width:200px;">` +
-                    `<button id="${post.id}" >delete movie</button>`
+                    `</div>` +
+
+                    `<div class="col-8">` +
+
+                    `<h3>${post.title}</h3>` +
+                    `<ul style="list-style: none">` +
+                    `<li>Genre:    ${post.genre}</li>` +
+                    `<li>Rating:  ${post.rating}</li>` +
+                    `<li>Director:  ${post.director}</li>` +
+                    `<li>Plot:  ${post.plot}</li>` +
+                    `</ul>`+
+                    `<button id="${post.id}" >delete movie</button>` +
+                    `</div>` +
+                    `</div>` +
+
+                    `</div>`
+
                 )
             }
 
@@ -78,17 +95,19 @@ fetch('https://spectacular-hammerhead-galley.glitch.me/movies')
             // e.preventDefault();
 
                 var editMovie = {
+                    currentTitle: $("#oldTitle").val(),
                     title: $("#editTitle").val(),
                     genre: $("#editGenre").val(),
                     rating: $("#editRating").val(),
                     director: $("#editDirector").val(),
-                    plot: $("#editPlot").val()
+                    plot: $("#editPlot").val(),
+                    poster: $("#editImg").val()
                 }
-            var titleEntered = editMovie.title
+            var titleEntered = editMovie.currentTitle
             // console.log(editMovie.title);
             //     console.log("You can edit the movie")
 
-            if (titleEntered === data[i].title) {
+            if (titleEntered.toLowerCase() === (data[i].title).toLowerCase()) {
                 console.log("The same title")
                 console.log(data[i].id)
 
@@ -111,7 +130,9 @@ fetch('https://spectacular-hammerhead-galley.glitch.me/movies')
 
         }
         })
-        // TRIED FOR EDIT BUTTON
+            console.log(data)
+
+            // TRIED FOR EDIT BUTTON
 
         // for (let i = 0; i < data.length; i++) {
         //     console.log(data.length)
@@ -212,7 +233,8 @@ $('#add').click((e) => {
         genre: $("#genre").val(),
         rating: $("#rating").val(),
         director: $("#director").val(),
-        plot: $("#plot").val()
+        plot: $("#plot").val(),
+        poster: $("#addImg").val()
     }
     // const url = 'https://codeup-json-server.glitch.me/movies';
     let options = {
