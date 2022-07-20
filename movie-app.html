@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Movie app</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--  Bootstrap CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--  Google Fonts  -->
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!--  Custom CSS  -->
     <link rel="stylesheet" href="movie-app.css">
 </head>
 <body>
@@ -20,28 +22,22 @@
 </div>
 <div class="backColor">
 
-    <div class="bean"> <!-- BOTTOM BEAN BORDER -->
+    <!-- BOTTOM BEAN BORDER -->
+    <div class="bean">
         <h1 style="text-align: center">Our Movie List</h1>
         <br>
-        <!--    </br>-->
-
     </div>
 
     <div class="controls">
-        <div id="reload" type="button"></div>
+        <div id="reload"></div>
     </div>
-
 
     <div class="spinner-wrapper">
         <div class="spinner"></div>
     </div>
 
-    <!--<div class="main-content">-->
-    <!--    <div class="container">-->
-    <!--        <div class="row">-->
     <div id="movies"></div>
 
-    <!--                <button id="post-id">Post Movie</button>-->
     <div class="container">
         <div class="row">
             <div class="col" style="outline: auto">
@@ -49,37 +45,31 @@
                     <h2 style="text-align: center; font-weight: bold">Add a movie</h2>
                     <div>
                         <!--                    <label>Title </label>-->
+                        <label for="title"></label>
                         <input placeholder="Add title here" type="text" id="title">
                     </div>
                     <div>
                         <!--                        <label>Genre </label>-->
+                        <label for="genre"></label>
                         <input placeholder="Add genre here" type="text" id="genre">
                     </div>
                     <div>
                         <!--                        <label>Rating </label>-->
+                        <label for="rating"></label>
                         <input placeholder="Add rating (1 Low-5 High)" type="text" id="rating">
                     </div>
                     <div>
                         <!--                        <label>Director </label>-->
+                        <label for="director"></label>
                         <input placeholder="Add director here" type="text" id="director">
                     </div>
-                    <!--                    <label>Genre </label>-->
-                    <!--                    <input type="text" id="genre">-->
-
-                    <!--                    <label>Rating </label>-->
-                    <!--                    <input type="text" id="rating">-->
-
-                    <!--                    <label>Director </label>-->
-                    <!--                    <input type="text" id="director">-->
-                    <!--                    <div class="textBox">-->
-                    <!--                        &lt;!&ndash;                        <label>Director </label>&ndash;&gt;-->
-                    <!--                        <input rows="4" placeholder="Add Plot Here" type="text" id="plot">-->
-                    <!--                    </div>-->
                     <div class="textBox">
                         <!--                        <label>Plot </label>-->
+                        <label for="plot"></label>
                         <textarea id="plot" rows="4" placeholder="Add Plot Here"></textarea>
                     </div>
                     <!--                    <label>poster </label>-->
+                    <label for="addImg"></label>
                     <input placeholder="Add a image URL" type="text" id="addImg">
                     <div>
                         <button id="add">Add Movie</button>
@@ -92,29 +82,36 @@
                     <h2 style="text-align: center; font-weight: bold">Edit a movie</h2>
                     <div>
                         <!--                    <label>Current Title </label>-->
+                        <label for="oldTitle"></label>
                         <input placeholder="Enter the current title" type="text" id="oldTitle">
                     </div>
                     <div>
                         <!--                    <label>Update Title </label>-->
+                        <label for="editTitle"></label>
                         <input placeholder="Enter the new title" type="text" id="editTitle">
                     </div>
                     <div>
                         <!--                    <label>Genre </label>-->
+                        <label for="editGenre"></label>
                         <input placeholder="Enter the genre here" type="text" id="editGenre">
                     </div>
                     <div>
                         <!--                    <label>Rating </label>-->
+                        <label for="editRating"></label>
                         <input placeholder="Enter the rating here" type="text" id="editRating">
                     </div>
                     <div>
                         <!--                    <label>Director </label>-->
+                        <label for="editDirector"></label>
                         <input placeholder="Enter the director here" type="text" id="editDirector">
                     </div>
                     <div class="textBox">
                         <!--                        <label>Plot </label>-->
+                        <label for="editPlot"></label>
                         <textarea id="editPlot" rows="5" placeholder="Add Plot Here"></textarea>
                     </div>
                     <!--                    <label>poster </label>-->
+                    <label for="editImg"></label>
                     <input placeholder="Update image URL" type="text" id="editImg">
                     <div>
                         <button id="edit">Edit Movie</button>
@@ -125,28 +122,9 @@
     </div>
 </div>
 
-` `
-
-<!--        <form class="col-6">-->
-<!--            <h1>Add a Movie:</h1>-->
-<!--            <label for="new-rating-selection">Movie Rating:</label>-->
-<!--            <select id="new-rating-selection">-->
-<!--                <option>1</option>-->
-<!--                <option>2</option>-->
-<!--                <option>3</option>-->
-<!--                <option>4</option>-->
-<!--                <option>5</option>-->
-<!--            </select>-->
-<!--            <br>-->
-<!--            <label for="new-title-selection">Movie Title:</label>-->
-<!--            <input id="new-title-selection" name="new-title-selection" type="text">-->
-<!--            <button>Submit Movie Title & Rating</button>-->
-<!--        </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 <!--scripts-->
+
+<!-- Inline JS -->
 <script>
     let spinnerWrapper = document.querySelector('.spinner-wrapper');
     window.addEventListener('load', function () {
@@ -155,16 +133,13 @@
     });
 </script>
 
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-<!--<script src="server.js"></script>-->
-
+<!-- JQuery CDN -->
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<!-- Cloudflare CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<!-- Bootstrap CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- External JS -->
 <script src="movie-app.js"></script>
 </body>
 </html>
