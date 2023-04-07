@@ -38,12 +38,11 @@ When the form is submitted, the page should not reload / refresh, instead, your 
 
 Allow users to edit existing movies:
 - Give users the option to edit an existing movie.
-- A form should be pre-populated with the selected movie's details
-Like creating a movie, this should not involve any page reloads, instead your javascript code should make an ajax request when the form is submitted.
+- A form should be pre-populated with the selected movie's details. Like creating a movie, this should not involve any page reloads, instead your javascript code should make an ajax request when the form is submitted.
 
 Delete movies:
-- Each movie should have a "delete" button
-When this button is clicked, your javascript should send a DELETE request
+- Each movie should have a "delete" button.
+- When this button is clicked, your javascript should send a DELETE request.
 
 Bonuses:
 - Add a disabled attribute to buttons while their corresponding ajax request is still pending.
