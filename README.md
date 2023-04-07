@@ -26,8 +26,7 @@ Setup:
 - Use your own remixed URL to fetch results inside of your project to perform RESTful API requests, it should look like: https://your-random-url.glitch.me/movies.
 - Keep it in mind that the json-server doesn't update in real-time the db.json file, but it does respond with the latest information. Always rely on the endpoint that looks like this https://codeup-json-server.glitch.me/movies
 
-Specification:
-Your application should:
+### SPECIFICATIONS
 
 On page load:
 - Display a "loading..." message. 
