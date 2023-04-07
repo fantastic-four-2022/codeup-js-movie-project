@@ -17,7 +17,7 @@ Frameworks:
 - Bootstrap
 
 Movies Application: 
-For this project, we will be building a single page movie application (SPA). It will allow users to add, edit, and delete movies, as well as rate them. We will be using json-server to mock a database and our backend, so that we can just worry about the front end and AJAX requests. The
+- For this project, we will be building a single page movie application (SPA). It will allow users to add, edit, and delete movies, as well as rate them. We will be using json-server to mock a database and our backend, so that we can just worry about the front end and AJAX requests. The
 json-server is configured to have a delay of 1.2 seconds, so you can see what your application might actually look like, instead of serving instantaneous reponses. You can modify this behavior by changing (or removing) the number after the -d flag inside of the npm dev script.
 
 Setup:
